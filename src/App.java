@@ -15,16 +15,23 @@ public class App {
         doMadlib();
     }
     
-    /**
-     * Document what this method does here!
-     */
-    public void printInstructions() {
-       
-    }
+    // this method 
     
     // add and implement the other methods you need in this area below!
+    public String getUserName() {
+        return "Pedro Martins";
+    }
+    public void printGreeting(String userNameInput) {
+        System.out.println("Hello, "+ userNameInput + ".");
+    }
     
-  
+    public void printInstructions() {
+       System.out.println("Enter proper words matching its category (nouns, verbs, adjectives, etc.) into the boxes below to get a humorous story!");
+       doMadLib(true);
+    }
+    public void doMadLib(boolean b) {
+        System.out.println();
+    }
 
     /* DO NOT TOUCH OR EDIT THE METHOD BELOW! ADD NO CODE BELOW THIS LINE */
     public static void main(String[] args) throws Exception {
