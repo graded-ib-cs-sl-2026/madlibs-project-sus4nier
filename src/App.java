@@ -12,7 +12,7 @@ public class App {
         String userName = getUserName();
         printGreeting(userName);
         printInstructions();
-        doMadlib();
+        doMadLib();
     }
     
     // this method 
@@ -27,10 +27,9 @@ public class App {
     
     public void printInstructions() {
        System.out.println("Enter proper words matching its category (nouns, verbs, adjectives, etc.) into the boxes below to get a humorous story!");
-       doMadLib(true);
     }
-    public void doMadLib(boolean b) {
-        System.out.println();
+    public void doMadLib() {
+        return;
     }
 
     /* DO NOT TOUCH OR EDIT THE METHOD BELOW! ADD NO CODE BELOW THIS LINE */
