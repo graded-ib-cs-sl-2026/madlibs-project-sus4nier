@@ -35,6 +35,9 @@ public class App {
 
     public void doMadLib() {
         Scanner userInput = new Scanner(System.in);
+        boolean playAgain;
+
+        do {
         // Adjective Inputs
         System.out.println("Adjective 1:");
         String adj1 = userInput.nextLine();
@@ -60,17 +63,47 @@ public class App {
         String pet = userInput.nextLine();
         System.out.println("Name:");
         String name = userInput.nextLine();
+        
+        
+        System.out.println("Choose what MadLib story you want!");
+        System.out.println("1. Ordinary Life");
+        System.out.println("2. Adventure Story");        
+        int choice = userInput.nextInt();
+
 
         // Madlib result
-        String story = "It was a " + adj1 + ", cold November day. I woke up to the " + adj2 +
+        if (choice == 1) {
+        String routineStory = "It was a " + adj1 + ", cold November day. I woke up to the " + adj2 +
                 " smell of " + flowers + " in my desk. I " + pastVerb +
                 " down the stairs to see my " + pet + " running around the house like a " + noun1 +
                 ". I then greeted my " + adj3 + " sibling named " + name +
                 ", who has a very " + adj4 + " " + noun2 + ".";
-        System.out.println(story);
-        // return "Hope you had a great story!";
+        System.out.println("Here is a ordinary story");
+        System.out.println(routineStory);
+        }
+        else if (choice == 2){
+        String adventureStory = "It was a " + adj1 + ", bright summer morning when I stumbled upon a " + adj2 + 
+            " treasure chest filled with " + flowers + ". Excited, I " + pastVerb + 
+            " to my backyard, where my " + pet + " was digging like a " + noun1 + 
+            ". I shared the news with my " + adj3 + " sibling, " + name + 
+            ", who immediately grabbed a " + adj4 + " map to find more hidden " + noun2 + ".";
+            System.out.println("Here is a adventure story");
+            System.out.println(adventureStory);
+        }
+        else {
+            System.out.println("Invalid choice. Please enter 1 or 2");
+        } 
 
-    }
+        System.out.println("Would you like to play again? Answer with yes/no.");
+        String response = userInput.nextLine();
+        playAgain = response.equalsIgnoreCase("yes");
+        
+    } while(playAgain);
+    userInput.close();
+    
+}
+
+    
 
     /* DO NOT TOUCH OR EDIT THE METHOD BELOW! ADD NO CODE BELOW THIS LINE */
     public static void main(String[] args) throws Exception {
