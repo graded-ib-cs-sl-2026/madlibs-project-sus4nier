@@ -25,7 +25,16 @@ public class App {
     }
 
     public void printGreeting(String userNameInput) {
-        System.out.println("Hello, " + userNameInput + "!");
+        System.out.println("##   ##  ### ###  ####      ## ##    ## ##   ##   ##  ### ###  \n" + //
+                        "##   ##   ##  ##   ##      ##   ##  ##   ##   ## ##    ##  ##  \n" + //
+                        "##   ##   ##       ##      ##       ##   ##  # ### #   ##      \n" + //
+                        "## # ##   ## ##    ##      ##       ##   ##  ## # ##   ## ##   \n" + //
+                        "# ### #   ##       ##      ##       ##   ##  ##   ##   ##      \n" + //
+                        " ## ##    ##  ##   ##  ##  ##   ##  ##   ##  ##   ##   ##  ##  \n" + //
+                        "##   ##  ### ###  ### ###   ## ##    ## ##   ##   ##  ### ###  \n" + //
+                        "                                                               \n" + //
+                        "");
+        System.out.println("Hello " + userNameInput + "!");
     }
 
     public void printInstructions() {
