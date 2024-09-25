@@ -80,7 +80,7 @@ public class App {
         System.out.println("1. Ordinary Life");
         System.out.println("2. Adventure Story");
         int choice;    
-        if (! userInput.hasNextInt()) {
+        if (! userInput.hasNextInt()) { // fix provided by teacher
             choice = 0;
         }   else {
             choice = userInput.nextInt(); // nextInt idea was found in the website StackOverflow
@@ -110,7 +110,7 @@ public class App {
             invalidResult = false;
         }
         else {
-            System.out.println("Invalid choice. Please enter 1 or 2"); // If the user inputs a invalid answer it prompts to enter a new one (glithched atm)
+            System.out.println("Invalid choice. Please enter 1 or 2"); // If the user inputs a invalid answer it prompts to enter a new one
             invalidResult = true;
         } 
     } while(invalidResult);
