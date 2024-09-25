@@ -74,14 +74,21 @@ public class App {
         String name = userInput.nextLine();
         
         // Choice between 2 different stories
+        boolean invalidResult; // loop for a invalid result 
+        do {
         System.out.println("Choose what MadLib story you want!");
         System.out.println("1. Ordinary Life");
-        System.out.println("2. Adventure Story");        
-        int choice = userInput.nextInt(); // nextInt idea was found in the website StackOverflow
+        System.out.println("2. Adventure Story");
+        int choice;    
+        if (! userInput.hasNextInt()) {
+            choice = 0;
+        }   else {
+            choice = userInput.nextInt(); // nextInt idea was found in the website StackOverflow
+        }
         userInput.nextLine(); // Fix for nextInt provided by teacher 
 
-
         // Madlib result
+       
         if (choice == 1) { // Story 2
         String routineStory = "It was a " + adj1 + ", cold November day. I woke up to the " + adj2 +
                 " smell of " + flowers + " in my desk. I " + pastVerb +
@@ -90,6 +97,7 @@ public class App {
                 ", who has a very " + adj4 + " " + noun2 + ".";
         System.out.println("Here is a ordinary story");
         System.out.println(routineStory);
+        invalidResult = false;
         }
         else if (choice == 2){ // story 1
         String adventureStory = "It was a " + adj1 + ", bright summer morning when I stumbled upon a " + adj2 + 
@@ -99,10 +107,13 @@ public class App {
             ", who immediately grabbed a " + adj4 + " map to find more hidden " + noun2 + ".";
             System.out.println("Here is a adventure story");
             System.out.println(adventureStory);
+            invalidResult = false;
         }
         else {
             System.out.println("Invalid choice. Please enter 1 or 2"); // If the user inputs a invalid answer it prompts to enter a new one (glithched atm)
+            invalidResult = true;
         } 
+    } while(invalidResult);
         // Asks if the user plays again
         System.out.println("Would you like to play again? Answer with yes/no.");
         String response = userInput.nextLine();
