@@ -46,7 +46,7 @@ public class App {
         Scanner userInput = new Scanner(System.in);
         boolean playAgain; // 
 
-        do { // foundation for loop
+        do { // foundation for loop also found in StackOverflow
         // Adjective Inputs
         System.out.println("Adjective 1:");
         String adj1 = userInput.nextLine();
