@@ -20,11 +20,11 @@ public class App {
         System.out.println("Enter your name below.");
         Scanner userInput = new Scanner(System.in);
             String getUserName = userInput.nextLine();
-            return getUserName;
+            return getUserName; // simple scanner response
 
     }
 
-    public void printGreeting(String userNameInput) {
+    public void printGreeting(String userNameInput) { // ASCII text looks cool
         System.out.println("##   ##  ### ###  ####      ## ##    ## ##   ##   ##  ### ###  \n" + //
                         "##   ##   ##  ##   ##      ##   ##  ##   ##   ## ##    ##  ##  \n" + //
                         "##   ##   ##       ##      ##       ##   ##  # ### #   ##      \n" + //
@@ -44,9 +44,9 @@ public class App {
 
     public void doMadLib() {
         Scanner userInput = new Scanner(System.in);
-        boolean playAgain;
+        boolean playAgain; // 
 
-        do {
+        do { // foundation for loop
         // Adjective Inputs
         System.out.println("Adjective 1:");
         String adj1 = userInput.nextLine();
@@ -73,15 +73,16 @@ public class App {
         System.out.println("Name:");
         String name = userInput.nextLine();
         
-        
+        // Choice between 2 different stories
         System.out.println("Choose what MadLib story you want!");
         System.out.println("1. Ordinary Life");
         System.out.println("2. Adventure Story");        
-        int choice = userInput.nextInt();
+        int choice = userInput.nextInt(); // nextInt idea was found in the website StackOverflow
+        userInput.nextLine(); // Fix for nextInt provided by teacher 
 
 
         // Madlib result
-        if (choice == 1) {
+        if (choice == 1) { // Story 2
         String routineStory = "It was a " + adj1 + ", cold November day. I woke up to the " + adj2 +
                 " smell of " + flowers + " in my desk. I " + pastVerb +
                 " down the stairs to see my " + pet + " running around the house like a " + noun1 +
@@ -90,7 +91,7 @@ public class App {
         System.out.println("Here is a ordinary story");
         System.out.println(routineStory);
         }
-        else if (choice == 2){
+        else if (choice == 2){ // story 1
         String adventureStory = "It was a " + adj1 + ", bright summer morning when I stumbled upon a " + adj2 + 
             " treasure chest filled with " + flowers + ". Excited, I " + pastVerb + 
             " to my backyard, where my " + pet + " was digging like a " + noun1 + 
@@ -100,15 +101,14 @@ public class App {
             System.out.println(adventureStory);
         }
         else {
-            System.out.println("Invalid choice. Please enter 1 or 2");
+            System.out.println("Invalid choice. Please enter 1 or 2"); // If the user inputs a invalid answer it prompts to enter a new one (glithched atm)
         } 
-
+        // Asks if the user plays again
         System.out.println("Would you like to play again? Answer with yes/no.");
         String response = userInput.nextLine();
         playAgain = response.equalsIgnoreCase("yes");
         
-    } while(playAgain);
-    userInput.close();
+    } while(playAgain); // activates the loop
     
 }
 
